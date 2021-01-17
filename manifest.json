@@ -1,0 +1,71 @@
+{
+  "name": "爱看视频",
+  "version": "1.0",
+  "description": "访问爱奇艺、优酷、腾讯视频、芒果tv，官方网站直接观看vip视频!",
+  "permissions": [
+	"activeTab",
+	"storage",
+	"declarativeContent",
+	"*://*/*", 
+	"webRequest",
+	"webRequestBlocking"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+   {
+     "matches": ["*://*.iqiyi.com/v_*.html*"],
+	 "exclude_matches": ["*://m.iqiyi.com/v_*.html*"],
+     "js": ["jquery-3.5.1.min.js","iqiyi.contentScript.js"]
+   },
+   {
+     "matches": ["*://m.iqiyi.com/v_*.html*"],
+     "js": ["jquery-3.5.1.min.js","m.iqiyi.contentScript.js"]
+   },
+   {
+     "matches": ["*://*.youku.com/*id_*"],
+	 "exclude_matches": ["*://m.youku.com/*id_*"],
+     "js": ["jquery-3.5.1.min.js","youku.contentScript.js"]
+   },
+   {
+     "matches": ["*://m.youku.com/*id_*"],
+     "js": ["jquery-3.5.1.min.js","m.youku.contentScript.js"]
+   },
+   {
+     "matches": ["*://*.qq.com/x/cover/*.html*"],
+	 "exclude_matches": ["*://m.v.qq.com/x/*"],
+     "js": ["jquery-3.5.1.min.js","tx.contentScript.js"]
+   },
+   {
+     "matches": ["*://m.v.qq.com/x/*"],
+     "js": ["jquery-3.5.1.min.js","m.tx.contentScript.js"]
+   },
+   {
+     "matches": ["*://*.mgtv.com/b/*"],
+	 "exclude_matches": ["*://m.mgtv.com/b/*"],
+     "js": ["jquery-3.5.1.min.js","mgtv.contentScript.js"]
+   },
+   {
+     "matches": ["*://m.mgtv.com/b/*"],
+     "js": ["jquery-3.5.1.min.js","m.mgtv.contentScript.js"]
+   }
+  ],
+  "options_ui": {"chrome_style": true, "page": "setting.html", "open_in_tab": true},
+  "browser_action": {
+    "default_popup": "setting.html",
+	"default_icon": {
+		"16": "images/16.png",
+		"32": "images/32.png",
+		"48": "images/48.png",
+		"128": "images/128.png"
+	}
+  },
+  "icons": {
+		"16": "images/16.png",
+		"32": "images/32.png",
+		"48": "images/48.png",
+		"128": "images/128.png"
+  },
+  "manifest_version": 2
+}
