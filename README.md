@@ -9,7 +9,9 @@
 
 
 1.chrome浏览器安装   http://blog.lifetype.xyz/archives/894
+
 2.edge浏览器安装     http://blog.lifetype.xyz/archives/903
+
 3.安卓Kiwi browser手机浏览器安装   http://blog.lifetype.xyz/archives/908
 
 
