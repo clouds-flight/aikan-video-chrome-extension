@@ -8,4 +8,12 @@
 视频加载速度和是否有广告，跟解析线路有关，插件内不提供解析线路，需自行配置（直接百度搜索vip视频解析线路，可以找到很多）
 
 
+1.chrome浏览器安装   http://blog.lifetype.xyz/archives/894
+2.edge浏览器安装     http://blog.lifetype.xyz/archives/903
+3.安卓Kiwi browser手机浏览器安装   http://blog.lifetype.xyz/archives/908
+
+
+该扩展仅用于个人学习
+
+
 
